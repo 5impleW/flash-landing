@@ -407,7 +407,7 @@ body { margin:0; }
 </head>
 <body>
 <div class="local-preview-banner">
-  这是 <b>FLASH json 模板 (rider-fit修复)</b> 草稿主题的本地静态预览快照（更新于 2026-07-22）。<b>本次更新：</b>修复了几处按钮文字颜色未显式指定的 CSS 漏洞（问答卡片 / SKU 选择卡 / 身高预设 / 骑行距离与年份选项 / 脚踏舒适度卡片）——桌面浏览器默认按钮文字是黑色所以之前测试没暴露问题，但部分手机 App 内置浏览器（如飞书）对未设置颜色的按钮文字会用默认链接蓝色渲染，现已统一显式设为深色，不再依赖浏览器默认值。
+  这是 <b>FLASH json 模板 (rider-fit修复)</b> 草稿主题的本地静态预览快照（更新于 2026-07-22）。<b>本次更新：</b>补上了漏掉的一处——"Choose your color" 颜色选择按钮（Black/Gray）的文字也没有显式设置颜色，同样会在部分手机 App 内置浏览器里显示成默认链接蓝，现已修复。并对全站所有 &lt;button&gt; 做了系统性排查，确认问答卡片 / SKU 选择卡 / 身高预设 / 骑行距离与年份选项 / 脚踏舒适度卡片 / 颜色选择这些交互按钮的文字颜色现在都已显式指定，不再依赖浏览器默认值。
 </div>
 <div class="flash-lp">
 <style>
@@ -861,7 +861,7 @@ body { margin:0; }
 .flash-lp .flp-color-label{display:block;font-size:.74rem;font-weight:850;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:11px}
 .flash-lp .flp-color-label em{font-style:normal;color:var(--muted);font-weight:700}
 .flash-lp .flp-color-options{display:flex;gap:12px;flex-wrap:wrap}
-.flash-lp .flp-color-swatch{position:relative;display:flex;align-items:center;gap:11px;border:1px solid var(--line);background:#fff;border-radius:10px;padding:12px 40px 12px 14px;font:inherit;font-size:.92rem;font-weight:750;cursor:pointer;min-width:150px;transition:.15s ease}
+.flash-lp .flp-color-swatch{position:relative;display:flex;align-items:center;gap:11px;border:1px solid var(--line);background:#fff;border-radius:10px;padding:12px 40px 12px 14px;font:inherit;font-size:.92rem;font-weight:750;color:var(--ink);cursor:pointer;min-width:150px;transition:.15s ease}
 .flash-lp .flp-color-swatch:hover{border-color:#c7cdd5}
 .flash-lp .flp-color-swatch.flp-active{border:2px solid var(--ink);background:#fffbea;padding:11px 39px 11px 13px}
 .flash-lp .flp-color-swatch:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
