@@ -90,7 +90,7 @@ body { margin:0; }
 .flash-lp .flp-savings-breakdown{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}.flash-lp .flp-saving-metric{border:1px solid #303742;border-radius:7px;padding:16px}.flash-lp .flp-saving-metric small{display:block;color:#959fac;font-size:.65rem;text-transform:uppercase;letter-spacing:.11em;font-weight:800}.flash-lp .flp-saving-metric b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:2rem;color:#fff;margin-top:5px}.flash-lp .flp-saving-metric p{font-size:.74rem;color:#aeb6c1;margin-top:3px}
 .flash-lp .flp-value-stack{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.flash-lp .flp-value-chip{border-radius:7px;background:#fff;color:var(--ink);padding:15px 16px}.flash-lp .flp-value-chip small{display:block;color:var(--muted);font-size:.63rem;text-transform:uppercase;letter-spacing:.1em;font-weight:850}.flash-lp .flp-value-chip b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:1.7rem;margin-top:4px}.flash-lp .flp-value-chip p{font-size:.72rem;color:var(--body);margin-top:2px}
 .flash-lp .flp-savings-result .flp-result-cta{display:flex;gap:10px;margin-top:22px}.flash-lp .flp-savings-result .flp-result-cta .flp-btn{flex:1}.flash-lp .flp-savings-result .flp-result-cta .flp-btn-line{border-color:#4a5360;color:#fff}.flash-lp .flp-savings-result .flp-result-cta .flp-btn-line:hover{background:#fff;color:var(--ink)}.flash-lp .flp-savings-disclaimer{font-size:.69rem;color:#7f8997;margin-top:16px;line-height:1.55}
-@media(max-width:900px){.flash-lp .flp-savings-layout{grid-template-columns:1fr}.flash-lp .flp-savings-controls{order:2}.flash-lp .flp-savings-result{order:1}}
+@media(max-width:900px){.flash-lp .flp-savings-layout{grid-template-columns:1fr}.flash-lp .flp-savings-controls{order:1}.flash-lp .flp-savings-result{order:2}}
 @media(max-width:650px){.flash-lp .flp-savings-controls,.flash-lp .flp-savings-result{padding:22px 18px}.flash-lp .flp-ride-presets{grid-template-columns:1fr}.flash-lp .flp-year-options{grid-template-columns:repeat(4,1fr)}.flash-lp .flp-advanced-grid,.flash-lp .flp-savings-breakdown,.flash-lp .flp-value-stack{grid-template-columns:1fr}.flash-lp .flp-savings-total{font-size:4.6rem}.flash-lp .flp-savings-result .flp-result-cta{display:grid}.flash-lp .flp-monthly-save{width:100%;justify-content:center}}
 
 /* range */
@@ -415,7 +415,7 @@ body { margin:0; }
 </head>
 <body>
 <div class="local-preview-banner">
-⚠️ 这是<b>仅供交互测试</b>的临时版本，<b>不代表真实库存状态</b> —— 已把两个 2kW Onboard Charger 版本（Single / Dual）强制解除"售罄"限制，方便你点选测试 OBC ↔ Heated Grips 的联动逻辑。正式版（<b>flash-landing-local.html</b>）里这两个 SKU 仍然是售罄/不可选的真实状态，请勿把这份测试文件当成最终交付页面。除此之外内容与正式版同步（更新于 2026-07-23，含 Rider stories 评价板块等最新改动）。
+⚠️ 这是<b>仅供交互测试</b>的临时版本，<b>不代表真实库存状态</b> —— 已把两个 2kW Onboard Charger 版本（Single / Dual）强制解除"售罄"限制，方便你点选测试 OBC ↔ Heated Grips 的联动逻辑。正式版（<b>flash-landing-local.html</b>）里这两个 SKU 仍然是售罄/不可选的真实状态，请勿把这份测试文件当成最终交付页面。除此之外内容与正式版同步（更新于 2026-07-23，含省钱计算器手机端顺序修正、Gallery 删图、Rear rack 合并、220V→200–240V 统一改法、便携充电器 110V 说明等最新改动）。
 </div>
 <div class="flash-lp">
 <style>
@@ -477,7 +477,7 @@ body { margin:0; }
 .flash-lp .flp-savings-breakdown{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}.flash-lp .flp-saving-metric{border:1px solid #303742;border-radius:7px;padding:16px}.flash-lp .flp-saving-metric small{display:block;color:#959fac;font-size:.65rem;text-transform:uppercase;letter-spacing:.11em;font-weight:800}.flash-lp .flp-saving-metric b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:2rem;color:#fff;margin-top:5px}.flash-lp .flp-saving-metric p{font-size:.74rem;color:#aeb6c1;margin-top:3px}
 .flash-lp .flp-value-stack{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.flash-lp .flp-value-chip{border-radius:7px;background:#fff;color:var(--ink);padding:15px 16px}.flash-lp .flp-value-chip small{display:block;color:var(--muted);font-size:.63rem;text-transform:uppercase;letter-spacing:.1em;font-weight:850}.flash-lp .flp-value-chip b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:1.7rem;margin-top:4px}.flash-lp .flp-value-chip p{font-size:.72rem;color:var(--body);margin-top:2px}
 .flash-lp .flp-savings-result .flp-result-cta{display:flex;gap:10px;margin-top:22px}.flash-lp .flp-savings-result .flp-result-cta .flp-btn{flex:1}.flash-lp .flp-savings-result .flp-result-cta .flp-btn-line{border-color:#4a5360;color:#fff}.flash-lp .flp-savings-result .flp-result-cta .flp-btn-line:hover{background:#fff;color:var(--ink)}.flash-lp .flp-savings-disclaimer{font-size:.69rem;color:#7f8997;margin-top:16px;line-height:1.55}
-@media(max-width:900px){.flash-lp .flp-savings-layout{grid-template-columns:1fr}.flash-lp .flp-savings-controls{order:2}.flash-lp .flp-savings-result{order:1}}
+@media(max-width:900px){.flash-lp .flp-savings-layout{grid-template-columns:1fr}.flash-lp .flp-savings-controls{order:1}.flash-lp .flp-savings-result{order:2}}
 @media(max-width:650px){.flash-lp .flp-savings-controls,.flash-lp .flp-savings-result{padding:22px 18px}.flash-lp .flp-ride-presets{grid-template-columns:1fr}.flash-lp .flp-year-options{grid-template-columns:repeat(4,1fr)}.flash-lp .flp-advanced-grid,.flash-lp .flp-savings-breakdown,.flash-lp .flp-value-stack{grid-template-columns:1fr}.flash-lp .flp-savings-total{font-size:4.6rem}.flash-lp .flp-savings-result .flp-result-cta{display:grid}.flash-lp .flp-monthly-save{width:100%;justify-content:center}}
 
 /* range */
@@ -962,7 +962,7 @@ body { margin:0; }
         <div class="flp-quiz-step"><small class="flp-quiz-step-label">2 · How do you usually charge?</small>
         <div class="flp-quiz-options">
           <button class="flp-quiz-option flp-active" type="button" data-charge="apartment" aria-pressed="true"><b>840 W portable flexibility</b><span>Charge on the bike where you park, or remove the battery and charge indoors.</span></button>
-          <button class="flp-quiz-option" type="button" data-charge="garage" aria-pressed="false"><b>Faster J1772 / 220V charging</b><span>I want the 2 kW onboard system for faster direct-to-bike charging.</span></button>
+          <button class="flp-quiz-option" type="button" data-charge="garage" aria-pressed="false"><b>Faster J1772 / 200–240V charging</b><span>I want the 2 kW onboard system for faster direct-to-bike charging.</span></button>
           <button class="flp-quiz-option" type="button" data-charge="mixed" aria-pressed="false"><b>Maximum charging flexibility</b><span>I want removable packs plus faster onboard J1772 charging.</span></button>
         </div></div>
         <div class="flp-quiz-result" aria-live="polite">
@@ -1020,7 +1020,7 @@ body { margin:0; }
             <button class="flp-sku-card" type="button" data-sku="single-obc" data-name="FLASH Single · 2kW Onboard Charger" data-price="4999" data-compare="5499" data-charge-type="obc" data-variant-black="49555464814730" data-variant-gray="49555464781962" aria-pressed="false">
               <span class="flp-sku-type">Plug-in convenience</span><div class="flp-sku-name">With 2kW Onboard — Single</div><span class="flp-launch-mini">Launch price</span>
               <div class="flp-sku-price"><strong>$4,999</strong><del>$5,499</del></div><div class="flp-sku-save">Currently sold out</div>
-              <p class="flp-sku-benefit"><b>Only $200 more.</b> Plug directly into the bike using compatible 220V / 8A or J1772 charging.</p>
+              <p class="flp-sku-benefit"><b>Only $200 more.</b> Plug directly into the bike using a compatible 200–240V source or J1772 charging.</p>
             </button>
           </div>
         </article>
@@ -1040,7 +1040,7 @@ body { margin:0; }
             <button class="flp-sku-card" type="button" data-sku="dual-obc" data-name="FLASH Dual · 2kW Onboard Charger" data-price="5999" data-compare="6999" data-charge-type="obc" data-variant-black="49730081685642" data-variant-gray="49730081652874" aria-pressed="false">
               <span class="flp-sku-type">Best overall</span><div class="flp-sku-name">With 2kW Onboard — Dual</div><span class="flp-launch-mini">Launch price</span>
               <div class="flp-sku-price"><strong>$5,999</strong><del>$6,999</del></div><div class="flp-sku-save">Currently sold out</div>
-              <p class="flp-sku-benefit"><b>Maximum flexibility.</b> Plug into J1772 or compatible 220V, while keeping both batteries removable.</p>
+              <p class="flp-sku-benefit"><b>Maximum flexibility.</b> Plug into J1772 or a compatible 200–240V source, while keeping both batteries removable.</p>
             </button>
           </div>
         </article>
@@ -1099,8 +1099,8 @@ body { margin:0; }
     </div>
 
     <div class="flp-config-explain">
-      <article class="flp-explain-card"><span class="flp-tag">840 W Portable Charger</span><h3 style="margin-top:11px">Charge on the bike—or bring the battery inside.</h3><p>Connect the charger with the pack installed in FLASH, or remove the pack for indoor charging. You save <strong>$200</strong> versus the onboard system.</p></article>
-      <article class="flp-explain-card"><span class="flp-tag">2 kW Onboard</span><h3 style="margin-top:11px">Faster direct-to-bike charging.</h3><p>Plug directly into FLASH through J1772 or a compatible 220V / 8A source. The faster onboard system adds convenience for <strong>$200</strong>.</p></article>
+      <article class="flp-explain-card"><span class="flp-tag">840 W Portable Charger</span><h3 style="margin-top:11px">Charge on the bike—or bring the battery inside.</h3><p>Connect the charger with the pack installed in FLASH, or remove the pack for indoor charging.</p></article>
+      <article class="flp-explain-card"><span class="flp-tag">2 kW Onboard</span><h3 style="margin-top:11px">Faster direct-to-bike charging.</h3><p>Plug directly into FLASH through J1772 or a compatible 200–240V source. The faster onboard system adds convenience for <strong>$200</strong>.</p></article>
     </div>
     <div class="flp-portable-proof" aria-label="Portable Charger and 2 kW Onboard J1772 comparison">
       <article class="flp-charge-proof-card">
@@ -1116,11 +1116,11 @@ body { margin:0; }
         <div class="flp-charge-proof-copy">
           <p class="flp-eyebrow">2 kW Onboard · J1772 · Real hardware</p>
           <h3>Faster J1772 charging.</h3>
-          <p>Charge directly through J1772 or a compatible 220V / 8A source while keeping both battery packs removable.</p>
+          <p>Charge directly through J1772 or a compatible 200–240V source while keeping both battery packs removable.</p>
         </div>
       </article>
     </div>
-    <p class="flp-note" style="margin-top:15px">Published onboard charging times require a compatible 220V / 8A source. A standard 110V outlet does not provide the stated onboard charging performance. The 840 W portable charger supports on-bike or removed-pack charging; exact included accessories should be confirmed on the final product listing.</p>
+    <p class="flp-note" style="margin-top:15px">Published onboard charging times require a compatible 200–240V source. A standard 110V outlet does not provide the stated onboard charging performance. The 840 W portable charger supports on-bike or removed-pack charging; exact included accessories should be confirmed on the final product listing.</p>
   </div>
 </section>
 </div>
@@ -1472,7 +1472,7 @@ body { margin:0; }
       </article>
       <article class="flp-scenario-card">
         <img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/flash-house-j1772-indoor-home-garage-v3.jpg?v=1784434073" width="1568" height="1003" loading="lazy" alt="Real black electric motorcycle charging through its inner-front connection point inside a private residential garage">
-        <div class="flp-scenario-card-copy"><span class="flp-tag">House</span><h3>Plug in at home.</h3><p>With the 2 kW onboard charger, connect FLASH directly to J1772 or a compatible 220V / 8A source while the batteries remain installed.</p></div>
+        <div class="flp-scenario-card-copy"><span class="flp-tag">House</span><h3>Plug in at home.</h3><p>With the 2 kW onboard charger, connect FLASH directly to J1772 or a compatible 200–240V source while the batteries remain installed.</p></div>
       </article>
       <article class="flp-scenario-card flp-scenario-card-wide">
         <img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/flash-highway-commute-v1.jpg?v=1784434073" width="1536" height="1024" loading="lazy" alt="Helmeted rider commuting on a black HMP FLASH electric motorcycle on a Bay Area freeway">
@@ -1518,10 +1518,9 @@ body { margin:0; }
         <article class="flp-feature"><span class="flp-tag">Standard</span><h3>ABS + traction control</h3><p>More confidence under hard braking and acceleration, especially on wet or uneven city streets.</p></article>
         <article class="flp-feature"><span class="flp-tag">Standard</span><h3>CarPlay + Android Auto</h3><p>Navigation, music and communication integrated into the display instead of mounted on the handlebar.</p></article>
         <article class="flp-feature"><span class="flp-tag">Standard</span><h3>Dashcam + TPMS</h3><p>Record every ride and see live tire-pressure information before a slow leak becomes a roadside problem.</p></article>
-        <article class="flp-feature"><span class="flp-tag">Optional</span><h3>Rear rack</h3><p>Add the factory-fit rear rack to mount a top case for helmet storage or delivery boxes — no extra brackets needed. Currently free when added with your FLASH.</p></article>
         <article class="flp-feature"><span class="flp-tag">Practical</span><h3>Two-up riding</h3><p>299 lb curb weight and 676 lb gross capacity leave approximately 377 lb for riders and cargo.</p></article>
         <article class="flp-feature"><span class="flp-tag">Practical</span><h3>About 20 L remains with two packs</h3><p>A separate under-seat cavity stays usable even with both batteries installed; add a rear trunk when you need more.</p></article>
-        <article class="flp-feature flp-wide"><span class="flp-tag">Optional</span><h3>Options: heated grips · GPS tracking · keyless remote</h3><p>Add heated grips for cold mornings, GPS tracking for parking peace of mind, or the keyless remote fob. All three are optional — the standard price only includes equipment every rider actually uses.</p></article>
+        <article class="flp-feature flp-wide"><span class="flp-tag">Accessory available</span><h3>Accessories: rear rack · heated grips · GPS tracking · keyless remote</h3><p>Add the factory-fit rear rack to mount a top case for helmet storage or delivery boxes (currently free when added with your FLASH), heated grips for cold mornings, GPS tracking for parking peace of mind, or the keyless remote fob. All are available as accessories — the standard price only includes equipment every rider actually uses.</p></article>
       </div>
     </div>
   </div>
@@ -1536,13 +1535,13 @@ body { margin:0; }
     <div>
       <p class="flp-eyebrow">Charging flexibility</p>
       <h2>Charge the bike—or bring the batteries inside.</h2>
-      <p class="flp-lede">Every FLASH uses removable battery packs. The included 840 W portable charger works on-bike or off-bike; the optional 2 kW onboard system adds faster J1772 / compatible 220V direct-to-bike charging.</p>
-      <div class="flp-warning"><b>Important:</b> the current onboard 20–80% charging figures require 220V at approximately 8A. A standard 110V outlet does not provide the stated onboard charging performance. Tesla Wall Connectors require a compatible J1772 adapter.</div>
+      <p class="flp-lede">Every FLASH uses removable battery packs. The included 840 W portable charger works on-bike or off-bike; the optional 2 kW onboard system adds faster J1772 / compatible 200–240V direct-to-bike charging.</p>
+      <div class="flp-warning"><b>Important:</b> the current onboard 20–80% charging figures require a compatible 200–240V source. A standard 110V outlet does not provide the stated onboard charging performance. Tesla Wall Connectors require a compatible J1772 adapter.</div>
     </div>
     <div class="flp-charge-card">
-      <div class="flp-charge-row"><span class="flp-num">2 hr</span><div><b>Dual battery, 20–80%</b><p>Using the onboard charger with a compatible 220V / 8A source.</p></div></div>
-      <div class="flp-charge-row"><span class="flp-num">1 hr</span><div><b>Single battery, 20–80%</b><p>Using the onboard charger with a compatible 220V / 8A source.</p></div></div>
-      <div class="flp-charge-row"><span class="flp-num">4.5 hr</span><div><b>840 W portable charging · per pack</b><p>The battery may remain installed in FLASH or be removed for indoor charging. Charge two packs back-to-back, or use a second charger to charge both at once.</p></div></div>
+      <div class="flp-charge-row"><span class="flp-num">2 hr</span><div><b>Dual battery, 20–80%</b><p>Using the onboard charger with a compatible 200–240V source.</p></div></div>
+      <div class="flp-charge-row"><span class="flp-num">1 hr</span><div><b>Single battery, 20–80%</b><p>Using the onboard charger with a compatible 200–240V source.</p></div></div>
+      <div class="flp-charge-row"><span class="flp-num">4.5 hr</span><div><b>840 W portable charging · per pack</b><p>Plugs into a standard 110V household outlet. The battery may remain installed in FLASH or be removed for indoor charging. Charge two packs back-to-back, or use a second charger to charge both at once.</p></div></div>
       <div class="flp-charge-row"><span class="flp-num">40 lb</span><div><b>Per battery pack</b><p>Designed to be removable by an adult rider without specialized equipment.</p></div></div>
     </div>
   </div>
@@ -1762,7 +1761,7 @@ body { margin:0; }
             <div class="flp-specs-row"><span>Charge time — single battery, 20–80%</span><b>~1 hr (onboard)</b></div>
             <div class="flp-specs-row"><span>Charge time — dual battery, 20–80%</span><b>~2 hr (onboard)</b></div>
             <div class="flp-specs-row"><span>Portable charge time</span><b>~4.5 hr per pack</b></div>
-            <div class="flp-specs-row"><span>Onboard charging source</span><b>J1772 / 220V · 8A</b></div>
+            <div class="flp-specs-row"><span>Onboard charging source</span><b>J1772 / 200–240V</b></div>
             <div class="flp-specs-row"><span>Portable charger (included)</span><b>840 W · on- or off-bike</b></div>
             <div class="flp-specs-row"><span>Onboard charger (optional)</span><b>2 kW · up to 25 A</b></div>
           </div>
@@ -1873,14 +1872,13 @@ body { margin:0; }
     <p class="flp-lede">Real riders, real streets — browse the full photo set, not just studio shots.</p>
 
     <div class="flp-gallery-shell">
-      <div class="flp-gallery-track" tabindex="0" aria-label="HMP FLASH lifestyle photo gallery, 7 images">
-        <figure class="flp-gallery-slide"><img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/ChatGPT_Image_Jun_23_2026_05_14_45_PM.webp?v=1782206177" alt="HMP FLASH lifestyle photography, image 1 of 7" loading="lazy"></figure>
-        <figure class="flp-gallery-slide"><img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/ChatGPT_Image_Jun_18_2026_05_27_21_PM_2.webp?v=1781775001" alt="HMP FLASH lifestyle photography, image 2 of 7" loading="lazy"></figure>
-        <figure class="flp-gallery-slide"><img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/ChatGPT_Image_Jun_23_2026_05_14_50_PM.webp?v=1782206177" alt="HMP FLASH lifestyle photography, image 3 of 7" loading="lazy"></figure>
-        <figure class="flp-gallery-slide"><img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/ChatGPT_Image_Jun_23_2026_05_14_16_PM.webp?v=1782206177" alt="HMP FLASH lifestyle photography, image 4 of 7" loading="lazy"></figure>
-        <figure class="flp-gallery-slide"><img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/ChatGPT_Image_Jun_23_2026_05_14_41_PM.webp?v=1782206176" alt="HMP FLASH lifestyle photography, image 5 of 7" loading="lazy"></figure>
-        <figure class="flp-gallery-slide"><img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/ChatGPT_Image_Jun_18_2026_02_53_36_PM_4.webp?v=1781765737" alt="HMP FLASH lifestyle photography, image 6 of 7" loading="lazy"></figure>
-        <figure class="flp-gallery-slide"><img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/ChatGPT_Image_Jun_18_2026_05_29_23_PM_4.webp?v=1781775166" alt="HMP FLASH lifestyle photography, image 7 of 7" loading="lazy"></figure>
+      <div class="flp-gallery-track" tabindex="0" aria-label="HMP FLASH lifestyle photo gallery, 6 images">
+        <figure class="flp-gallery-slide"><img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/ChatGPT_Image_Jun_18_2026_05_27_21_PM_2.webp?v=1781775001" alt="HMP FLASH lifestyle photography, image 1 of 6" loading="lazy"></figure>
+        <figure class="flp-gallery-slide"><img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/ChatGPT_Image_Jun_23_2026_05_14_50_PM.webp?v=1782206177" alt="HMP FLASH lifestyle photography, image 2 of 6" loading="lazy"></figure>
+        <figure class="flp-gallery-slide"><img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/ChatGPT_Image_Jun_23_2026_05_14_16_PM.webp?v=1782206177" alt="HMP FLASH lifestyle photography, image 3 of 6" loading="lazy"></figure>
+        <figure class="flp-gallery-slide"><img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/ChatGPT_Image_Jun_23_2026_05_14_41_PM.webp?v=1782206176" alt="HMP FLASH lifestyle photography, image 4 of 6" loading="lazy"></figure>
+        <figure class="flp-gallery-slide"><img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/ChatGPT_Image_Jun_18_2026_02_53_36_PM_4.webp?v=1781765737" alt="HMP FLASH lifestyle photography, image 5 of 6" loading="lazy"></figure>
+        <figure class="flp-gallery-slide"><img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/ChatGPT_Image_Jun_18_2026_05_29_23_PM_4.webp?v=1781775166" alt="HMP FLASH lifestyle photography, image 6 of 6" loading="lazy"></figure>
       </div>
       <div class="flp-gallery-foot">
         <span class="flp-gallery-hint">Drag or swipe to browse</span>
@@ -1954,10 +1952,10 @@ body { margin:0; }
     <p class="flp-eyebrow">Common questions</p>
     <h2 style="margin-bottom:25px">Know before you order.</h2>
     <details><summary>Which version should I buy?</summary><div class="flp-answer">Choose the single battery when keeping the purchase price low matters most and your normal ride is comfortably under about 40 miles. Choose dual battery for regular freeway riding, longer commutes, two-up use or higher-mileage work. Dual battery is the version represented by the 75 mph and 70–85 mile SF-tested figures.</div></details>
-    <details><summary>What is the difference between the 840 W Portable Charger and 2 kW Onboard?</summary><div class="flp-answer">The 840 W Portable Charger is the lower-price configuration and can charge a battery while it remains installed in FLASH or after the pack is removed for indoor charging. The 2 kW Onboard configuration adds faster direct-to-bike charging through J1772 or a compatible 220V / 8A source while keeping the batteries removable.</div></details>
+    <details><summary>What is the difference between the 840 W Portable Charger and 2 kW Onboard?</summary><div class="flp-answer">The 840 W Portable Charger is the lower-price configuration and can charge a battery while it remains installed in FLASH or after the pack is removed for indoor charging. The 2 kW Onboard configuration adds faster direct-to-bike charging through J1772 or a compatible 200–240V source while keeping the batteries removable.</div></details>
     <details><summary>Can I ride with only one battery installed?</summary><div class="flp-answer">Yes. FLASH can operate normally with one pack installed. With two packs installed, both packs are connected in parallel and discharge simultaneously—they work together, not one after the other.</div></details>
     <details><summary>How much under-seat storage remains with both batteries installed?</summary><div class="flp-answer">Approximately 20 L of separate usable storage remains beside the battery compartment with both packs installed. The real photographs above show the protective cover, battery orientation and remaining cavity.</div></details>
-    <details><summary>What power do the charging systems require?</summary><div class="flp-answer">The portable charger is rated at 840 W and works with the battery installed in FLASH or removed for indoor charging. The onboard J1772 system's published 20–80% times require a compatible 220V / 8A source; a standard 110V outlet does not provide the stated onboard charging performance.</div></details>
+    <details><summary>What power do the charging systems require?</summary><div class="flp-answer">The portable charger is rated at 840 W and plugs into a standard 110V household outlet; it works with the battery installed in FLASH or removed for indoor charging. The onboard J1772 system's published 20–80% times require a compatible 200–240V source; a standard 110V outlet does not provide the stated onboard charging performance.</div></details>
     <details><summary>Can FLASH be registered?</summary><div class="flp-answer">FLASH includes a 17-digit VIN, EPA label, MCO and registration paperwork, and the manufacturer/VIN information can be searched through the NHTSA database. Registration procedures and fees still vary by state.</div></details>
     <details><summary>What arrives in the shipping crate?</summary><div class="flp-answer">The vehicle arrives mostly assembled. The customer must install the handlebar and front panel before use. HMP provides setup guidance; riders who are not comfortable with motorcycle setup should arrange professional assembly.</div></details>
     <details><summary>What routine maintenance does FLASH need?</summary><div class="flp-answer">FLASH does not need oil changes, spark plugs, valve adjustments, fuel-system service or CVT belt and roller replacement. Routine maintenance focuses on tires, brake pads and discs, brake fluid, suspension and steering inspections, plus periodic battery and controller checks. Replacement is based on actual wear and the owner-manual schedule.</div></details>
@@ -2038,13 +2036,14 @@ body { margin:0; }
 <style>
 .flp-sticky-buy{position:fixed;z-index:30;left:0;right:0;bottom:0;background:rgba(9,12,14,.96);backdrop-filter:blur(10px);border-top:1px solid #2b3438;box-shadow:0 -10px 28px rgba(0,0,0,.2);color:#fff}
 .flp-sticky-inner{max-width:1180px;margin:auto;padding:10px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px}
-.flp-sticky-copy b{display:block;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+.flp-sticky-copy{min-width:0}
+.flp-sticky-copy b{display:block;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .flp-sticky-copy span{font-size:.78rem;color:#9ea8ae}
-.flp-sticky-actions{display:flex;gap:9px}
-.flp-sticky-actions .flp-btn{min-height:42px;padding:0 20px;font-size:.86rem}
+.flp-sticky-actions{display:flex;gap:9px;flex-shrink:0}
+.flp-sticky-actions .flp-btn{min-height:42px;padding:0 20px;font-size:.86rem;white-space:nowrap}
 .flp-sticky-actions .flp-btn-line{border-color:#465158;color:#fff}
 .flp-sticky-spacer{height:76px}
-@media(max-width:650px){.flp-sticky-copy span{display:none}.flp-sticky-actions .flp-btn-line{display:none}.flp-sticky-inner{padding:9px 14px}.flp-sticky-actions .flp-btn{padding:0 16px}.flp-sticky-spacer{height:62px}}
+@media(max-width:650px){.flp-sticky-copy span{display:none}.flp-sticky-actions .flp-btn-line{display:none}.flp-sticky-inner{padding:9px 14px}.flp-sticky-actions .flp-btn{padding:0 16px;font-size:.82rem}.flp-sticky-spacer{height:62px}}
 </style>
 <div class="flash-lp">
 <section class="flp-final flp-dark" id="final-cta">
@@ -2553,7 +2552,7 @@ if(window.__flashLPInit){return;}window.__flashLPInit=true;
     selectedName.textContent=card.dataset.name+' — '+selectedColor;
     var dual=card.dataset.sku.indexOf('dual')===0;
     var obc=card.dataset.chargeType==='obc';
-    selectedDescription.textContent=(dual?'75 mph, 70–85 miles of SF range':'60 mph, about 40 miles of SF range')+', '+(obc?'faster direct-to-bike J1772 / 220V charging plus removable batteries.':'840 W portable charging on-bike or off-bike.');
+    selectedDescription.textContent=(dual?'75 mph, 70–85 miles of SF range':'60 mph, about 40 miles of SF range')+', '+(obc?'faster direct-to-bike J1772 / 200–240V charging plus removable batteries.':'840 W portable charging on-bike or off-bike.');
 
     var gripsToggle=document.getElementById('addonGrips');
     if(obc){
