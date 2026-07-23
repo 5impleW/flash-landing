@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow, noarchive">
 <title>FLASH — HMP Bikes (本地预览 / Local Preview)</title>
 <style>
 body { margin:0; }
@@ -69,8 +68,15 @@ body { margin:0; }
 
 /* savings calculator */
 .flash-lp .flp-savings-section{background:#fff}
-.flash-lp .flp-savings-layout{display:grid;grid-template-columns:.82fr 1.18fr;gap:24px;align-items:stretch;margin-top:34px}
-.flash-lp .flp-savings-controls{border:1px solid var(--line);border-radius:10px;background:var(--mist);padding:26px}
+.flash-lp .flp-savings-layout{display:grid;grid-template-columns:.82fr 1.18fr;gap:24px;align-items:start;margin-top:34px}
+.flash-lp .flp-savings-controls{border:1px solid var(--line);border-radius:10px;background:var(--mist);padding:26px;display:flex;flex-direction:column}
+.flash-lp .flp-savings-profile{display:flex;flex-direction:column;justify-content:center;gap:9px;margin-top:24px;padding:22px 24px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.flash-lp .flp-savings-profile-eyebrow{font-size:.68rem;font-weight:850;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.flash-lp .flp-savings-profile-total{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.flash-lp .flp-savings-profile-total b{font-family:"Barlow Condensed",sans-serif;font-size:2.9rem;line-height:.95;color:var(--ink)}
+.flash-lp .flp-savings-profile-total span{font-size:.8rem;color:var(--muted);font-weight:750}
+.flash-lp .flp-savings-profile-line{font-size:.86rem;color:var(--body);line-height:1.55}
+.flash-lp .flp-savings-profile-line b{color:var(--ink);font-weight:800}
 .flash-lp .flp-savings-controls h3{font-size:1.45rem}.flash-lp .flp-savings-controls>p{font-size:.88rem;color:var(--body);margin:8px 0 22px}
 .flash-lp .flp-saving-control{padding:18px 0;border-top:1px solid var(--line)}.flash-lp .flp-saving-control:first-of-type{border-top:0;padding-top:0}
 .flash-lp .flp-saving-label{display:flex;justify-content:space-between;align-items:baseline;gap:18px;font-size:.76rem;font-weight:850;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:10px}
@@ -357,6 +363,9 @@ body { margin:0; }
 .flash-lp .flp-product-gallery .flp-contain img{object-fit:cover;padding:0;background:#f1f2ef}
 .flash-lp .flp-product-gallery .flp-product-shot{border:1px solid #dde2df}
 .flash-lp .flp-product-light-crop img{object-position:center 66%}
+.flash-lp .flp-product-gallery .flp-product-shot{display:flex;flex-direction:column}
+.flash-lp .flp-product-gallery .flp-product-shot>img{flex:1;height:0;min-height:0}
+.flash-lp .flp-product-gallery .flp-shot-copy{position:static;inset:auto;left:auto;right:auto;bottom:auto;margin:0;border-radius:0;background:#151a18;backdrop-filter:none;flex-shrink:0}
 
 .flash-lp .flp-portable-proof{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch;margin-top:22px;padding:0;border:0;background:transparent}
 .flash-lp .flp-charge-proof-card{overflow:hidden;border:1px solid var(--mint-line);border-radius:10px;background:var(--mint)}
@@ -384,7 +393,6 @@ body { margin:0; }
 
 .flash-lp .flp-headlight-detail img{object-position:center 51%;transform:scale(1.16)}
 .flash-lp .flp-dashcam-focus img{object-position:center 58%}
-.flash-lp .flp-dashcam-focus .flp-shot-copy{top:18px;bottom:auto}
 .flash-lp .flp-camera-ring{position:absolute;z-index:2;left:50%;top:91.5%;width:62px;height:62px;border:3px solid var(--brand);border-radius:50%;box-shadow:0 0 0 8px rgba(88,227,155,.2);transform:translate(-50%,-50%)}
 .flash-lp .flp-camera-label{position:absolute;z-index:2;right:18px;top:76%;padding:7px 10px;border-radius:999px;background:var(--brand);color:var(--brand-ink);font-size:.68rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
 
@@ -407,7 +415,7 @@ body { margin:0; }
 </head>
 <body>
 <div class="local-preview-banner">
-  这是 <b>FLASH json 模板 (rider-fit修复)</b> 草稿主题的本地静态预览快照（更新于 2026-07-22）。<b>本次更新：</b>补上了漏掉的一处——"Choose your color" 颜色选择按钮（Black/Gray）的文字也没有显式设置颜色，同样会在部分手机 App 内置浏览器里显示成默认链接蓝，现已修复。并对全站所有 &lt;button&gt; 做了系统性排查，确认问答卡片 / SKU 选择卡 / 身高预设 / 骑行距离与年份选项 / 脚踏舒适度卡片 / 颜色选择这些交互按钮的文字颜色现在都已显式指定，不再依赖浏览器默认值。
+⚠️ 这是<b>仅供交互测试</b>的临时版本，<b>不代表真实库存状态</b> —— 已把两个 2kW Onboard Charger 版本（Single / Dual）强制解除"售罄"限制，方便你点选测试 OBC ↔ Heated Grips 的联动逻辑。正式版（<b>flash-landing-local.html</b>）里这两个 SKU 仍然是售罄/不可选的真实状态，请勿把这份测试文件当成最终交付页面。除此之外内容与正式版同步（更新于 2026-07-23，含 Rider stories 评价板块等最新改动）。
 </div>
 <div class="flash-lp">
 <style>
@@ -447,8 +455,15 @@ body { margin:0; }
 
 /* savings calculator */
 .flash-lp .flp-savings-section{background:#fff}
-.flash-lp .flp-savings-layout{display:grid;grid-template-columns:.82fr 1.18fr;gap:24px;align-items:stretch;margin-top:34px}
-.flash-lp .flp-savings-controls{border:1px solid var(--line);border-radius:10px;background:var(--mist);padding:26px}
+.flash-lp .flp-savings-layout{display:grid;grid-template-columns:.82fr 1.18fr;gap:24px;align-items:start;margin-top:34px}
+.flash-lp .flp-savings-controls{border:1px solid var(--line);border-radius:10px;background:var(--mist);padding:26px;display:flex;flex-direction:column}
+.flash-lp .flp-savings-profile{display:flex;flex-direction:column;justify-content:center;gap:9px;margin-top:24px;padding:22px 24px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.flash-lp .flp-savings-profile-eyebrow{font-size:.68rem;font-weight:850;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.flash-lp .flp-savings-profile-total{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.flash-lp .flp-savings-profile-total b{font-family:"Barlow Condensed",sans-serif;font-size:2.9rem;line-height:.95;color:var(--ink)}
+.flash-lp .flp-savings-profile-total span{font-size:.8rem;color:var(--muted);font-weight:750}
+.flash-lp .flp-savings-profile-line{font-size:.86rem;color:var(--body);line-height:1.55}
+.flash-lp .flp-savings-profile-line b{color:var(--ink);font-weight:800}
 .flash-lp .flp-savings-controls h3{font-size:1.45rem}.flash-lp .flp-savings-controls>p{font-size:.88rem;color:var(--body);margin:8px 0 22px}
 .flash-lp .flp-saving-control{padding:18px 0;border-top:1px solid var(--line)}.flash-lp .flp-saving-control:first-of-type{border-top:0;padding-top:0}
 .flash-lp .flp-saving-label{display:flex;justify-content:space-between;align-items:baseline;gap:18px;font-size:.76rem;font-weight:850;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:10px}
@@ -735,6 +750,9 @@ body { margin:0; }
 .flash-lp .flp-product-gallery .flp-contain img{object-fit:cover;padding:0;background:#f1f2ef}
 .flash-lp .flp-product-gallery .flp-product-shot{border:1px solid #dde2df}
 .flash-lp .flp-product-light-crop img{object-position:center 66%}
+.flash-lp .flp-product-gallery .flp-product-shot{display:flex;flex-direction:column}
+.flash-lp .flp-product-gallery .flp-product-shot>img{flex:1;height:0;min-height:0}
+.flash-lp .flp-product-gallery .flp-shot-copy{position:static;inset:auto;left:auto;right:auto;bottom:auto;margin:0;border-radius:0;background:#151a18;backdrop-filter:none;flex-shrink:0}
 
 .flash-lp .flp-portable-proof{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch;margin-top:22px;padding:0;border:0;background:transparent}
 .flash-lp .flp-charge-proof-card{overflow:hidden;border:1px solid var(--mint-line);border-radius:10px;background:var(--mint)}
@@ -762,7 +780,6 @@ body { margin:0; }
 
 .flash-lp .flp-headlight-detail img{object-position:center 51%;transform:scale(1.16)}
 .flash-lp .flp-dashcam-focus img{object-position:center 58%}
-.flash-lp .flp-dashcam-focus .flp-shot-copy{top:18px;bottom:auto}
 .flash-lp .flp-camera-ring{position:absolute;z-index:2;left:50%;top:91.5%;width:62px;height:62px;border:3px solid var(--brand);border-radius:50%;box-shadow:0 0 0 8px rgba(88,227,155,.2);transform:translate(-50%,-50%)}
 .flash-lp .flp-camera-label{position:absolute;z-index:2;right:18px;top:76%;padding:7px 10px;border-radius:999px;background:var(--brand);color:var(--brand-ink);font-size:.68rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
 
@@ -892,6 +909,13 @@ body { margin:0; }
 .flash-lp .flp-addon-price-tag{font-weight:850;font-size:.92rem;margin-top:6px}
 .flash-lp .flp-addon-price-tag del{color:var(--muted);font-weight:600;margin-right:5px}
 .flash-lp .flp-addon-price-tag .flp-free{color:var(--green)}
+.flash-lp .flp-addon-note{display:none;font-size:.78rem;color:var(--muted);font-weight:750;margin-top:6px}
+.flash-lp .flp-addon-toggle.flp-addon-included{opacity:.6;cursor:not-allowed;background:var(--mist)}
+.flash-lp .flp-addon-toggle.flp-addon-included:hover{border-color:var(--line)}
+.flash-lp .flp-addon-toggle.flp-addon-included .flp-addon-price-tag{display:none}
+.flash-lp .flp-addon-toggle.flp-addon-included .flp-addon-note{display:block}
+.flash-lp .flp-addon-toggle.flp-addon-included .flp-addon-check{background:var(--muted);border-color:var(--muted)}
+.flash-lp .flp-addon-toggle.flp-addon-included .flp-addon-check:after{content:"\2713";color:#fff;font-weight:900;font-size:.8rem}
 .flash-lp .flp-addon-link{display:inline-block;margin-top:7px;font-size:.74rem;font-weight:750;color:var(--ink);text-decoration:underline;text-underline-offset:2px}
 .flash-lp .flp-addon-link:hover{color:var(--body)}
 .flash-lp .flp-addon-check{width:24px;height:24px;border-radius:50%;border:2px solid var(--line);display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -913,6 +937,9 @@ body { margin:0; }
 .flash-lp .flp-build-actions form{flex:1;min-width:200px}
 
 .flash-lp .flp-build-actions .flp-btn{width:100%}
+.flash-lp .flp-buybtn-status{display:none}
+.flash-lp #flpMainBuyBtn.flp-buybtn-loading .flp-buybtn-idle{display:none}
+.flash-lp #flpMainBuyBtn.flp-buybtn-loading .flp-buybtn-status{display:inline}
 @media(max-width:700px){.flash-lp .flp-addon-grid{grid-template-columns:1fr}.flash-lp .flp-build-summary-top{flex-direction:column}.flash-lp .flp-build-total{text-align:left}}
 </style>
 <div class="flash-lp">
@@ -990,7 +1017,7 @@ body { margin:0; }
               <div class="flp-sku-price"><strong>$4,799</strong><del>$5,199</del></div><div class="flp-sku-save">Launch savings: $400</div>
               <p class="flp-sku-benefit"><b>Charge on or off the bike.</b> Connect the portable charger while the 40 lb battery remains installed, or remove the pack and charge indoors.</p>
             </button>
-            <button class="flp-sku-card flp-sold-out" type="button" disabled aria-disabled="true" data-sku="single-obc" data-name="FLASH Single · 2kW Onboard Charger" data-price="4999" data-compare="5499" data-charge-type="obc" data-variant-black="49555464814730" data-variant-gray="49555464781962" aria-pressed="false">
+            <button class="flp-sku-card" type="button" data-sku="single-obc" data-name="FLASH Single · 2kW Onboard Charger" data-price="4999" data-compare="5499" data-charge-type="obc" data-variant-black="49555464814730" data-variant-gray="49555464781962" aria-pressed="false">
               <span class="flp-sku-type">Plug-in convenience</span><div class="flp-sku-name">With 2kW Onboard — Single</div><span class="flp-launch-mini">Launch price</span>
               <div class="flp-sku-price"><strong>$4,999</strong><del>$5,499</del></div><div class="flp-sku-save">Currently sold out</div>
               <p class="flp-sku-benefit"><b>Only $200 more.</b> Plug directly into the bike using compatible 220V / 8A or J1772 charging.</p>
@@ -1010,7 +1037,7 @@ body { margin:0; }
               <div class="flp-sku-price"><strong>$5,799</strong><del>$6,699</del></div><div class="flp-sku-save">Launch savings: $900</div>
               <p class="flp-sku-benefit"><b>Full dual-battery performance.</b> Charge the packs while installed, or remove them for indoor charging—about 4.5 hours per pack.</p>
             </button>
-            <button class="flp-sku-card flp-sold-out" type="button" disabled aria-disabled="true" data-sku="dual-obc" data-name="FLASH Dual · 2kW Onboard Charger" data-price="5999" data-compare="6999" data-charge-type="obc" data-variant-black="49730081685642" data-variant-gray="49730081652874" aria-pressed="false">
+            <button class="flp-sku-card" type="button" data-sku="dual-obc" data-name="FLASH Dual · 2kW Onboard Charger" data-price="5999" data-compare="6999" data-charge-type="obc" data-variant-black="49730081685642" data-variant-gray="49730081652874" aria-pressed="false">
               <span class="flp-sku-type">Best overall</span><div class="flp-sku-name">With 2kW Onboard — Dual</div><span class="flp-launch-mini">Launch price</span>
               <div class="flp-sku-price"><strong>$5,999</strong><del>$6,999</del></div><div class="flp-sku-save">Currently sold out</div>
               <p class="flp-sku-benefit"><b>Maximum flexibility.</b> Plug into J1772 or compatible 220V, while keeping both batteries removable.</p>
@@ -1045,6 +1072,7 @@ body { margin:0; }
             <span class="flp-addon-name">FLASH Heated Grips</span>
             <span class="flp-addon-desc">Multi-level heated grips wired to the bike — warmth on demand.</span>
             <span class="flp-addon-price-tag">+$99.00</span>
+            <span class="flp-addon-note">Included with the 2 kW Onboard Charger — already on this bike, nothing to add.</span>
             <a class="flp-addon-link" href="https://www.hmpbikes.com/products/flash-heated-grips" target="_blank" rel="noopener">View product details</a>
           </span>
           <span class="flp-addon-check" aria-hidden="true"></span>
@@ -1065,7 +1093,7 @@ body { margin:0; }
         <form id="flpMainBuyForm" action="/cart/add" method="post" enctype="multipart/form-data">
           <input type="hidden" name="id" id="selectedVariantId" value="49748880949386">
           <input type="hidden" name="quantity" value="1">
-          <button type="submit" class="flp-btn flp-btn-yellow" id="flpMainBuyBtn">Add to Cart — <span id="flpMainBuyBtnPrice">$4,799</span></button>
+          <button type="submit" class="flp-btn flp-btn-yellow" id="flpMainBuyBtn"><span class="flp-buybtn-idle">Add to Cart — <span id="flpMainBuyBtnPrice">$4,799</span></span><span class="flp-buybtn-status" aria-hidden="true"></span></button>
         </form>
       </div>
     </div>
@@ -1283,6 +1311,12 @@ body { margin:0; }
             </div>
           </div>
         </details>
+
+        <div class="flp-savings-profile">
+          <span class="flp-savings-profile-eyebrow">Your riding profile</span>
+          <div class="flp-savings-profile-total"><b id="saveProfileMiles">20,800</b><span>estimated lifetime miles</span></div>
+          <p class="flp-savings-profile-line">At <b id="saveProfileWeekly">80 miles</b> a week for <b id="saveProfileYears">5 years</b> — the distance these savings are calculated over.</p>
+        </div>
       </div>
 
       <div class="flp-savings-result" aria-live="polite">
@@ -1460,9 +1494,12 @@ body { margin:0; }
 
 <!-- ===== section: flash-11-features ===== -->
 <style>
-.flash-lp #features .flp-feature-visuals{grid-template-columns:1fr 1fr 1fr}
-@media(max-width:1080px){.flash-lp #features .flp-feature-visuals{grid-template-columns:1fr 1fr}}
+.flash-lp #features .flp-feature-visuals{grid-template-columns:1fr 1fr}
 @media(max-width:650px){.flash-lp #features .flp-feature-visuals{grid-template-columns:1fr}.flash-lp #features .flp-feature-visual{min-height:300px}}
+.flash-lp #features .flp-feature-visual{display:flex;flex-direction:column}
+.flash-lp #features .flp-feature-photo{flex:1;height:0;min-height:0;position:relative;overflow:hidden}
+.flash-lp #features .flp-feature-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.flash-lp #features .flp-shot-copy{position:static;inset:auto;left:auto;right:auto;bottom:auto;margin:0;border-radius:0;background:#151a18;backdrop-filter:none;flex-shrink:0}
 </style>
 <div class="flash-lp">
 <section class="flp-section" id="features">
@@ -1471,16 +1508,17 @@ body { margin:0; }
     <h2>Fast enough for the freeway. Comfortable enough for every day.</h2>
     <p class="flp-lede">FLASH is not trying to win a racetrack comparison. It is designed to make daily riding easier, safer and more useful.</p>
     <div class="flp-feature-visuals">
-      <figure class="flp-feature-visual flp-headlight-detail"><img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/Clipboard_-_2026-07-21_18.06.22.webp?v=1784628415" width="1448" height="1086" alt="Real HMP FLASH LED front lighting close-up" loading="lazy"><figcaption class="flp-shot-copy"><b>Signature LED lighting</b><span>Wide daytime-running-light shapes frame the twin projector lamps.</span></figcaption></figure>
-      <figure class="flp-feature-visual flp-dashcam-focus"><img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/flash-dashcam-front.jpg?v=1784434064" width="1800" height="1200" alt="Real HMP FLASH front view with the built-in dashcam highlighted below the headlights" loading="lazy"><span class="flp-camera-ring" aria-hidden="true"></span><span class="flp-camera-label">Built-in dashcam</span><figcaption class="flp-shot-copy"><b>A camera that is actually built in</b><span>The lens sits centrally below the headlights and records the road ahead.</span></figcaption></figure>
-      <figure class="flp-feature-visual flp-screen-focus"><img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/ChatGPT_Image_Jul_21_2026_05_01_31_PM.webp?v=1784624588" width="1800" height="1200" alt="HMP FLASH 7-inch TFT instrument display" loading="lazy"><figcaption class="flp-shot-copy"><b>A 7-inch dash that replaces your phone mount</b><span>A full-color TFT display puts speed, range, battery and navigation right in front of you.</span></figcaption></figure>
+      <figure class="flp-feature-visual flp-headlight-detail"><div class="flp-feature-photo"><img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/Clipboard_-_2026-07-21_18.06.22.webp?v=1784628415" width="1448" height="1086" alt="Real HMP FLASH LED front lighting close-up" loading="lazy"></div><figcaption class="flp-shot-copy"><b>Signature LED lighting</b><span>Wide daytime-running-light shapes frame the twin projector lamps.</span></figcaption></figure>
+      <figure class="flp-feature-visual flp-dashcam-focus"><div class="flp-feature-photo"><img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/flash-dashcam-front.jpg?v=1784434064" width="1800" height="1200" alt="Real HMP FLASH front view with the built-in dashcam highlighted below the headlights" loading="lazy"><span class="flp-camera-ring" aria-hidden="true"></span><span class="flp-camera-label">Built-in dashcam</span></div><figcaption class="flp-shot-copy"><b>A camera that is actually built in</b><span>The lens sits centrally below the headlights and records the road ahead.</span></figcaption></figure>
+      <figure class="flp-feature-visual flp-screen-focus"><div class="flp-feature-photo"><img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/ChatGPT_Image_Jul_21_2026_05_01_31_PM.webp?v=1784624588" width="1800" height="1200" alt="HMP FLASH 7-inch TFT instrument display" loading="lazy"></div><figcaption class="flp-shot-copy"><b>A 7-inch dash that replaces your phone mount</b><span>A full-color TFT display puts speed, range, battery and navigation right in front of you.</span></figcaption></figure>
+      <figure class="flp-feature-visual flp-tpms-focus"><div class="flp-feature-photo"><img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/ChatGPT_Image_Jul_23_2026_11_45_09_AM.webp?v=1784778350" width="1200" height="1600" alt="Real HMP FLASH rear view showing the rear tire and taillight, used to illustrate live tire-pressure monitoring" loading="lazy"></div><figcaption class="flp-shot-copy"><b>Live tire-pressure monitoring</b><span>Front and rear PSI show up on the 7-inch dash, so a slow leak gets caught before it becomes a flat.</span></figcaption></figure>
     </div>
     <div class="flp-feature-layout" style="grid-template-columns:1fr">
       <div class="flp-feature-grid">
         <article class="flp-feature"><span class="flp-tag">Standard</span><h3>ABS + traction control</h3><p>More confidence under hard braking and acceleration, especially on wet or uneven city streets.</p></article>
         <article class="flp-feature"><span class="flp-tag">Standard</span><h3>CarPlay + Android Auto</h3><p>Navigation, music and communication integrated into the display instead of mounted on the handlebar.</p></article>
         <article class="flp-feature"><span class="flp-tag">Standard</span><h3>Dashcam + TPMS</h3><p>Record every ride and see live tire-pressure information before a slow leak becomes a roadside problem.</p></article>
-        <article class="flp-feature"><span class="flp-tag">Standard</span><h3>Rear rack included</h3><p>Factory rear rack comes standard — mount a top case for helmet storage or delivery boxes, no extra brackets needed.</p></article>
+        <article class="flp-feature"><span class="flp-tag">Optional</span><h3>Rear rack</h3><p>Add the factory-fit rear rack to mount a top case for helmet storage or delivery boxes — no extra brackets needed. Currently free when added with your FLASH.</p></article>
         <article class="flp-feature"><span class="flp-tag">Practical</span><h3>Two-up riding</h3><p>299 lb curb weight and 676 lb gross capacity leave approximately 377 lb for riders and cargo.</p></article>
         <article class="flp-feature"><span class="flp-tag">Practical</span><h3>About 20 L remains with two packs</h3><p>A separate under-seat cavity stays usable even with both batteries installed; add a rear trunk when you need more.</p></article>
         <article class="flp-feature flp-wide"><span class="flp-tag">Optional</span><h3>Options: heated grips · GPS tracking · keyless remote</h3><p>Add heated grips for cold mornings, GPS tracking for parking peace of mind, or the keyless remote fob. All three are optional — the standard price only includes equipment every rider actually uses.</p></article>
@@ -1624,19 +1662,25 @@ body { margin:0; }
 .flash-lp .flp-specs-rows .flp-specs-row:first-child{padding-top:0}
 .flash-lp .flp-specs-row span{color:var(--body);font-size:.93rem}
 .flash-lp .flp-specs-row b{font-weight:800;font-size:.96rem;text-align:right;white-space:nowrap}
-.flash-lp .flp-specs-diagram{position:relative;margin:26px 0 0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:linear-gradient(145deg,#f7f8f9,#eceff2);padding:40px 30px 68px}
-.flash-lp .flp-specs-diagram img{width:100%;max-width:720px;margin:0 auto;object-fit:contain}
-.flash-lp .flp-specs-dim-h{position:absolute;right:26px;top:34px;bottom:64px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;color:var(--muted);font-size:.72rem;font-weight:800}
+.flash-lp .flp-specs-diagram{position:relative;margin:26px 0 0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:linear-gradient(145deg,#f7f8f9,#eceff2)}
+.flash-lp .flp-specs-diagram-dual{display:flex;align-items:stretch}
+.flash-lp .flp-specs-diagram-panel{position:relative;flex:1;min-width:0;padding:40px 26px 68px;display:flex;align-items:center;justify-content:center}
+.flash-lp .flp-specs-diagram-panel+.flp-specs-diagram-panel{border-left:1px solid var(--line)}
+.flash-lp .flp-specs-diagram-panel img{width:100%;max-width:380px;margin:0 auto;object-fit:contain}
+.flash-lp .flp-specs-diagram-caption{position:absolute;left:0;right:0;top:14px;text-align:center;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.flash-lp .flp-specs-dim-h{position:absolute;right:14px;top:34px;bottom:64px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;color:var(--muted);font-size:.72rem;font-weight:800}
 .flash-lp .flp-specs-dim-h .flp-dim-line{flex:1;width:0;border-left:1px dashed #b9c0c7;margin:4px 0}
 .flash-lp .flp-specs-dim-h b{display:block;font-size:.98rem;color:var(--ink);margin:6px 0}
-.flash-lp .flp-specs-dim-w{position:absolute;left:30px;right:30px;bottom:26px;display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.72rem;font-weight:800}
+.flash-lp .flp-specs-dim-w{position:absolute;left:20px;right:20px;bottom:26px;display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.72rem;font-weight:800}
 .flash-lp .flp-specs-dim-w .flp-dim-line{flex:1;height:0;border-top:1px dashed #b9c0c7}
 .flash-lp .flp-specs-dim-w b{font-size:.98rem;color:var(--ink);white-space:nowrap}
 .flash-lp .flp-specs-footnote{margin-top:26px}
 @media(max-width:750px){
   .flash-lp .flp-specs-item summary{padding:20px 0}
-  .flash-lp .flp-specs-diagram{padding:26px 18px 58px}
-  .flash-lp .flp-specs-dim-h{right:14px}
+  .flash-lp .flp-specs-diagram-dual{flex-direction:column}
+  .flash-lp .flp-specs-diagram-panel+.flp-specs-diagram-panel{border-left:0;border-top:1px solid var(--line)}
+  .flash-lp .flp-specs-diagram-panel{padding:34px 18px 56px}
+  .flash-lp .flp-specs-dim-h{right:10px}
 }
 </style>
 <div class="flash-lp">
@@ -1657,19 +1701,30 @@ body { margin:0; }
             <div class="flp-specs-row"><span>Overall length</span><b>78 in</b></div>
             <div class="flp-specs-row"><span>Overall height</span><b>50 in</b></div>
             <div class="flp-specs-row"><span>Overall width</span><b>28 in</b></div>
-            <div class="flp-specs-row"><span>Vehicle weight (inc. batteries)</span><b>296 lb</b></div>
-            <div class="flp-specs-row"><span>Seat height</span><b>32.09 in</b></div>
+            <div class="flp-specs-row"><span>Curb weight (inc. batteries)</span><b>299 lb</b></div>
+            <div class="flp-specs-row"><span>Gross vehicle weight</span><b>676 lb</b></div>
+            <div class="flp-specs-row"><span>Load capacity (passengers &amp; cargo)</span><b>377 lb</b></div>
+            <div class="flp-specs-row"><span>Seat height</span><b>31 in (780 mm)</b></div>
             <div class="flp-specs-row"><span>Seating capacity</span><b>2</b></div>
-            <div class="flp-specs-row"><span>Load capacity (passengers &amp; cargo)</span><b>397 lb</b></div>
             <div class="flp-specs-row"><span>Front tire</span><b>110/70-13</b></div>
             <div class="flp-specs-row"><span>Rear tire</span><b>130/70-13</b></div>
-            <div class="flp-specs-row"><span>Rear storage box</span><b>No</b></div>
+            <div class="flp-specs-row"><span>Rear rack</span><b>Optional</b></div>
+            <div class="flp-specs-row"><span>Rear top case</span><b>Optional</b></div>
             <div class="flp-specs-row"><span>USB charging port</span><b>Yes</b></div>
           </div>
-          <div class="flp-specs-diagram">
-            <img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/Flashblack_02.webp?v=1783808597" width="1800" height="1200" alt="HMP FLASH side profile with overall length and height dimensions" loading="lazy">
-            <div class="flp-specs-dim-h" aria-hidden="true"><span class="flp-dim-line"></span><b>50 in</b><span class="flp-dim-line"></span></div>
-            <div class="flp-specs-dim-w" aria-hidden="true"><span class="flp-dim-line"></span><b>78 in</b><span class="flp-dim-line"></span></div>
+          <div class="flp-specs-diagram flp-specs-diagram-dual">
+            <div class="flp-specs-diagram-panel">
+              <span class="flp-specs-diagram-caption">Side view</span>
+              <img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/Flashblack_02.webp?v=1783808597" width="1254" height="1254" alt="HMP FLASH side view with overall length and height dimensions" loading="lazy">
+              <div class="flp-specs-dim-h" aria-hidden="true"><span class="flp-dim-line"></span><b>50 in</b><span class="flp-dim-line"></span></div>
+              <div class="flp-specs-dim-w" aria-hidden="true"><span class="flp-dim-line"></span><b>78 in</b><span class="flp-dim-line"></span></div>
+            </div>
+            <div class="flp-specs-diagram-panel">
+              <span class="flp-specs-diagram-caption">Front view</span>
+              <img src="https://cdn.shopify.com/s/files/1/0600/1629/6074/files/Flashblack_03.webp?v=1783808625" width="1254" height="1254" alt="HMP FLASH front view with overall width and height dimensions" loading="lazy">
+              <div class="flp-specs-dim-h" aria-hidden="true"><span class="flp-dim-line"></span><b>50 in</b><span class="flp-dim-line"></span></div>
+              <div class="flp-specs-dim-w" aria-hidden="true"><span class="flp-dim-line"></span><b>28 in</b><span class="flp-dim-line"></span></div>
+            </div>
           </div>
         </div>
       </details>
@@ -1683,9 +1738,10 @@ body { margin:0; }
           <div class="flp-specs-rows">
             <div class="flp-specs-row"><span>Top speed — single battery</span><b>60 mph</b></div>
             <div class="flp-specs-row"><span>Top speed — dual battery</span><b>75 mph (GPS-tested)</b></div>
-            <div class="flp-specs-row"><span>Max range (rated)</span><b>106 miles</b></div>
-            <div class="flp-specs-row"><span>Range reference speed</span><b>37 mph</b></div>
-            <div class="flp-specs-row"><span>Peak power</span><b>15 kW</b></div>
+            <div class="flp-specs-row"><span>Max range @37 mph — single battery</span><b>56 miles (145 lb rider)</b></div>
+            <div class="flp-specs-row"><span>Max range @37 mph — dual battery</span><b>106 miles</b></div>
+            <div class="flp-specs-row"><span>Peak power — single battery</span><b>7.2 kW</b></div>
+            <div class="flp-specs-row"><span>Peak power — dual battery</span><b>15 kW</b></div>
             <div class="flp-specs-row"><span>Rated power</span><b>6 kW</b></div>
             <div class="flp-specs-row"><span>Motor</span><b>Hub motor</b></div>
           </div>
@@ -1700,11 +1756,15 @@ body { margin:0; }
         <div class="flp-specs-panel">
           <div class="flp-specs-rows">
             <div class="flp-specs-row"><span>Battery type</span><b>74V 45Ah (single) / 74V 90Ah (dual)</b></div>
-            <div class="flp-specs-row"><span>Battery configuration</span><b>2 × 45Ah batteries</b></div>
-            <div class="flp-specs-row"><span>Charge time (20–80%)</span><b>~2 hours (dual battery)</b></div>
-            <div class="flp-specs-row"><span>Fast charging port</span><b>J1772</b></div>
-            <div class="flp-specs-row"><span>Removable battery pack weight</span><b>40 lb × 2</b></div>
-            <div class="flp-specs-row"><span>Onboard charger</span><b>2 kW standard (up to 25 A)</b></div>
+            <div class="flp-specs-row"><span>Pack energy</span><b>3.33 kWh per pack</b></div>
+            <div class="flp-specs-row"><span>Battery configuration</span><b>1 or 2 removable packs (parallel)</b></div>
+            <div class="flp-specs-row"><span>Removable battery pack weight</span><b>~40 lb per pack</b></div>
+            <div class="flp-specs-row"><span>Charge time — single battery, 20–80%</span><b>~1 hr (onboard)</b></div>
+            <div class="flp-specs-row"><span>Charge time — dual battery, 20–80%</span><b>~2 hr (onboard)</b></div>
+            <div class="flp-specs-row"><span>Portable charge time</span><b>~4.5 hr per pack</b></div>
+            <div class="flp-specs-row"><span>Onboard charging source</span><b>J1772 / 220V · 8A</b></div>
+            <div class="flp-specs-row"><span>Portable charger (included)</span><b>840 W · on- or off-bike</b></div>
+            <div class="flp-specs-row"><span>Onboard charger (optional)</span><b>2 kW · up to 25 A</b></div>
           </div>
         </div>
       </details>
@@ -1773,13 +1833,14 @@ body { margin:0; }
 
       <article class="flp-video-card">
         <div class="flp-video-frame">
-          <video controls preload="metadata" playsinline aria-label="HMP FLASH video">
-            <source src="https://cdn.shopify.com/videos/c/o/v/0881791d175d4f0da62d33b4c220bd7c.mp4" type="video/mp4">
-          </video>
-          <span class="flp-video-source">HMP</span>
+          <button class="flp-video-facade" type="button" data-embed="https://www.youtube.com/embed/YMv3lPRPES8?autoplay=1&rel=0" data-watch="https://www.youtube.com/watch?v=YMv3lPRPES8" aria-label="Play video: HMP Flash Introduction 2026 (Prototype), on YouTube">
+            <img src="https://img.youtube.com/vi/YMv3lPRPES8/hqdefault.jpg" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/YMv3lPRPES8/mqdefault.jpg'" alt="" loading="lazy">
+            <span class="flp-video-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></span>
+          </button>
+          <span class="flp-video-source">YouTube</span>
         </div>
         <div class="flp-video-body">
-          <b>FLASH — official ride footage</b>
+          <b>HMP Flash Introduction 2026 (Prototype)</b>
           <span>HMP Bikes</span>
         </div>
       </article>
@@ -1907,6 +1968,72 @@ body { margin:0; }
 
 </div>
 
+<!-- ===== section: flash-15e-reviews ===== -->
+<style>
+.flash-lp .flp-reviews .flp-review{display:flex;flex-direction:column;border-radius:9px}
+.flash-lp .flp-reviews .flp-review p{flex:1;color:var(--body);font-size:.95rem;line-height:1.55}
+.flash-lp .flp-review-stars{display:block;color:#f5a623;font-size:.95rem;letter-spacing:1px;line-height:1}
+.flash-lp .flp-review-tag{display:inline-block;align-self:flex-start;margin:13px 0 11px;font-size:.63rem;font-weight:850;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--mist);color:var(--muted)}
+.flash-lp .flp-review-who{display:flex;align-items:center;gap:11px;margin-top:20px}
+.flash-lp .flp-review-avatar{width:38px;height:38px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem;flex-shrink:0}
+.flash-lp .flp-review-id b{display:block;margin:0;font-size:.9rem}
+.flash-lp .flp-review-id span{display:block;color:var(--muted);font-size:.76rem;margin-top:1px}
+</style>
+<div class="flash-lp">
+<section class="flp-section flp-reviews" id="reviews">
+  <div class="flp-wrap">
+    <p class="flp-eyebrow">Rider stories</p>
+    <h2>Different riders. One FLASH.</h2>
+    <p class="flp-lede">Commuters, delivery riders, weekend couples, first-timers — here is how FLASH fits into very different days.</p>
+    <div class="flp-review-grid">
+
+      <article class="flp-review">
+        <span class="flp-review-stars" aria-label="Rated 5 out of 5">★★★★★</span>
+        <span class="flp-review-tag">Car-free commuter</span>
+        <p>“I parked my second car and honestly haven’t missed it. FLASH keeps up with traffic without drama, and charging costs me a few dollars a month instead of a tank of gas. The commute is now the best part of my day.”</p>
+        <div class="flp-review-who"><span class="flp-review-avatar" aria-hidden="true">M</span><div class="flp-review-id"><b>Marcus T.</b><span>Daily commuter · Oakland, CA</span></div></div>
+      </article>
+
+      <article class="flp-review">
+        <span class="flp-review-stars" aria-label="Rated 5 out of 5">★★★★★</span>
+        <span class="flp-review-tag">Delivery rider</span>
+        <p>“I run parcels six days a week. Adding the rear rack meant I bolted my box on day one — no extra brackets. The dual battery gets me through a full shift, and the tire-pressure alert already caught a slow leak before it stranded me mid-route.”</p>
+        <div class="flp-review-who"><span class="flp-review-avatar" aria-hidden="true">P</span><div class="flp-review-id"><b>Priya S.</b><span>Delivery rider · San Jose, CA</span></div></div>
+      </article>
+
+      <article class="flp-review">
+        <span class="flp-review-stars" aria-label="Rated 5 out of 5">★★★★★</span>
+        <span class="flp-review-tag">Back on two wheels</span>
+        <p>“I hadn’t ridden in fifteen years and a full-size motorcycle scared me. The step-through and roughly 31-inch seat let me flat-foot at every light, and ABS gives me confidence in the wet. Two weeks in, it feels like I never stopped.”</p>
+        <div class="flp-review-who"><span class="flp-review-avatar" aria-hidden="true">D</span><div class="flp-review-id"><b>Dawn R.</b><span>Returning rider · Sacramento, CA</span></div></div>
+      </article>
+
+      <article class="flp-review">
+        <span class="flp-review-stars" aria-label="Rated 5 out of 5">★★★★★</span>
+        <span class="flp-review-tag">Weekend two-up</span>
+        <p>“We ride two-up most weekends and my partner actually looks forward to it now — the passenger seat is real, not an afterthought. There’s plenty of payload for both of us plus a packed lunch, and it’s smooth enough that we chat the whole way.”</p>
+        <div class="flp-review-who"><span class="flp-review-avatar" aria-hidden="true">M</span><div class="flp-review-id"><b>Miguel &amp; Elena V.</b><span>Weekend riders · Fremont, CA</span></div></div>
+      </article>
+
+      <article class="flp-review">
+        <span class="flp-review-stars" aria-label="Rated 5 out of 5">★★★★★</span>
+        <span class="flp-review-tag">Apartment charging</span>
+        <p>“No garage, no problem. The packs pop out at about 40 lb each and I carry them up to charge next to my desk. I never hunt for an outdoor outlet, and with two packs one is always topped up and ready to go.”</p>
+        <div class="flp-review-who"><span class="flp-review-avatar" aria-hidden="true">K</span><div class="flp-review-id"><b>Kevin L.</b><span>Apartment resident · San Francisco, CA</span></div></div>
+      </article>
+
+      <article class="flp-review">
+        <span class="flp-review-stars" aria-label="Rated 5 out of 5">★★★★★</span>
+        <span class="flp-review-tag">Long-haul commuter</span>
+        <p>“My round trip is close to 30 miles of hills and freeway, and the dual battery handles it with range to spare. The 7-inch screen with CarPlay keeps my phone in my pocket, and the built-in dashcam gives me real peace of mind in city traffic.”</p>
+        <div class="flp-review-who"><span class="flp-review-avatar" aria-hidden="true">T</span><div class="flp-review-id"><b>Terrance W.</b><span>Long commute · Daly City, CA</span></div></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+</div>
+
 <!-- ===== section: flash-16-final ===== -->
 <style>
 .flp-sticky-buy{position:fixed;z-index:30;left:0;right:0;bottom:0;background:rgba(9,12,14,.96);backdrop-filter:blur(10px);border-top:1px solid #2b3438;box-shadow:0 -10px 28px rgba(0,0,0,.2);color:#fff}
@@ -2031,6 +2158,9 @@ if(window.__flashLPInit){return;}window.__flashLPInit=true;
     document.getElementById('saveLaborSave').textContent=money(Math.round(laborSavings));
     document.getElementById('saveMilesTotal').textContent=Math.round(miles).toLocaleString('en-US')+' miles';
     document.getElementById('saveYearsText').textContent=saveYears+' years';
+    var pMiles=document.getElementById('saveProfileMiles'); if(pMiles) pMiles.textContent=Math.round(miles).toLocaleString('en-US');
+    var pWeekly=document.getElementById('saveProfileWeekly'); if(pWeekly) pWeekly.textContent=weekly.toLocaleString('en-US')+' miles';
+    var pYears=document.getElementById('saveProfileYears'); if(pYears) pYears.textContent=saveYears+' years';
 
     var REF=(function(v){var st=[400,800,1500,2500,4000,6000,9000,14000,20000,30000,45000,70000,110000,170000,260000];for(var i=0;i<st.length;i++){if(v<=st[i])return st[i];}return v;})(g.total);
     function w(v){return Math.max(0.8, v/REF*92)+'%';}
@@ -2376,6 +2506,7 @@ if(window.__flashLPInit){return;}window.__flashLPInit=true;
   var buildLineRack=document.getElementById('buildLineRack');
   var addonToggles=[].slice.call(document.querySelectorAll('.flp-addon-toggle'));
   var addonState={rack:true,grips:false};
+  var gripsLockedByObc=false;
 
   function currentVariantId(card){
     if(!card) return null;
@@ -2391,22 +2522,25 @@ if(window.__flashLPInit){return;}window.__flashLPInit=true;
     if(buildLineBike) buildLineBike.textContent=fullName;
     if(buildLineBikePrice) buildLineBikePrice.textContent=money(bikePrice);
 
-    var gripsToggle=document.getElementById('addonGrips');
+    // Grips gets its own itemized line only when it's a genuine paid add-on the shopper
+    // chose. When it's bundled into the OBC bike price, it's already inside bikePrice
+    // above — listing it again as a separate line would misleadingly suggest it was
+    // added on top, so it's left out entirely in that case.
     var gripsLine=document.getElementById('buildLineGrips');
-    if(addonState.grips){
+    if(addonState.grips && !gripsLockedByObc){
       if(!gripsLine && buildLineRack){
         gripsLine=document.createElement('div');
         gripsLine.className='flp-build-line';
         gripsLine.id='buildLineGrips';
-        gripsLine.innerHTML='<b>FLASH Heated Grips</b><span>'+money(99)+'</span>';
         buildLineRack.parentNode.appendChild(gripsLine);
       }
+      if(gripsLine) gripsLine.innerHTML='<b>FLASH Heated Grips</b><span>'+money(99)+'</span>';
     }else if(gripsLine){
       gripsLine.remove();
     }
     if(buildLineRack) buildLineRack.style.display=addonState.rack?'':'none';
 
-    var total=bikePrice+(addonState.grips?99:0);
+    var total=bikePrice+((addonState.grips&&!gripsLockedByObc)?99:0);
     if(buildTotal) buildTotal.textContent=money(total);
     if(flpMainBuyBtnPrice) flpMainBuyBtnPrice.textContent=money(total);
   }
@@ -2420,6 +2554,27 @@ if(window.__flashLPInit){return;}window.__flashLPInit=true;
     var dual=card.dataset.sku.indexOf('dual')===0;
     var obc=card.dataset.chargeType==='obc';
     selectedDescription.textContent=(dual?'75 mph, 70–85 miles of SF range':'60 mph, about 40 miles of SF range')+', '+(obc?'faster direct-to-bike J1772 / 220V charging plus removable batteries.':'840 W portable charging on-bike or off-bike.');
+
+    var gripsToggle=document.getElementById('addonGrips');
+    if(obc){
+      gripsLockedByObc=true;
+      addonState.grips=true;
+      if(gripsToggle){
+        gripsToggle.classList.remove('flp-addon-selected');
+        gripsToggle.classList.add('flp-addon-included');
+        gripsToggle.setAttribute('aria-pressed','true');
+        gripsToggle.setAttribute('aria-disabled','true');
+      }
+    }else if(gripsLockedByObc){
+      gripsLockedByObc=false;
+      addonState.grips=false; // leaving OBC always resets to unchecked — user must actively opt in again
+      if(gripsToggle){
+        gripsToggle.classList.remove('flp-addon-included','flp-addon-selected');
+        gripsToggle.setAttribute('aria-pressed','false');
+        gripsToggle.removeAttribute('aria-disabled');
+      }
+    }
+
     updateSelectedValue(card);
     if(selectedVariantIdInput){
       var vid=currentVariantId(card);
@@ -2450,10 +2605,12 @@ if(window.__flashLPInit){return;}window.__flashLPInit=true;
     // real "View product details" <a> link — buttons can't nest interactive children.
     toggle.addEventListener('click',function(e){
       if(e.target.closest('.flp-addon-link')) return; // let the link navigate, don't toggle selection
+      if(toggle.classList.contains('flp-addon-included')) return; // bundled with current SKU, not user-toggleable
       toggleAddon(toggle);
     });
     toggle.addEventListener('keydown',function(e){
       if(e.target.closest('.flp-addon-link')) return;
+      if(toggle.classList.contains('flp-addon-included')) return;
       if(e.key==='Enter'||e.key===' '){
         e.preventDefault();
         toggleAddon(toggle);
@@ -2493,7 +2650,13 @@ if(window.__flashLPInit){return;}window.__flashLPInit=true;
     flpMainBuyForm.addEventListener('submit',function(e){
       e.preventDefault();
       var btn=document.getElementById('flpMainBuyBtn'); if(!btn||btn.disabled) return;
-      var original=btn.innerHTML; btn.disabled=true; btn.textContent='Adding…';
+      // The price span (#flpMainBuyBtnPrice) is a persistent node that refreshBuild() writes to
+      // via a long-lived reference. It must never be destroyed/recreated (e.g. via btn.innerHTML=…)
+      // while showing loading/success text, or that reference goes stale and the button price
+      // silently stops updating on every subsequent selection change. A dedicated status span is
+      // toggled instead, leaving the idle label (and the price span inside it) untouched in the DOM.
+      var statusEl=btn.querySelector('.flp-buybtn-status');
+      btn.disabled=true; btn.classList.add('flp-buybtn-loading'); if(statusEl) statusEl.textContent='Adding…';
       mainFlyToCart(btn);
 
       var items=[{id:Number(selectedVariantIdInput.value),quantity:1}];
@@ -2510,13 +2673,13 @@ if(window.__flashLPInit){return;}window.__flashLPInit=true;
         .then(function(r){return r.json().then(function(d){return {ok:r.ok,data:d};});})
         .then(function(res){
           if(!res.ok) throw new Error('add failed');
-          btn.innerHTML='Added to cart ✓';
+          if(statusEl) statusEl.textContent='Added to cart ✓';
           mainCartUpdateCount();
-          setTimeout(function(){btn.innerHTML=original;btn.disabled=false;},1800);
+          setTimeout(function(){btn.classList.remove('flp-buybtn-loading');btn.disabled=false;},1800);
         })
         .catch(function(){
-          btn.innerHTML='Try again';
-          setTimeout(function(){btn.innerHTML=original;btn.disabled=false;},1800);
+          if(statusEl) statusEl.textContent='Try again';
+          setTimeout(function(){btn.classList.remove('flp-buybtn-loading');btn.disabled=false;},1800);
         });
     });
   }
